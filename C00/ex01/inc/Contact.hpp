@@ -6,7 +6,7 @@
 /*   By: geudes <geudes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 19:36:09 by geudes            #+#    #+#             */
-/*   Updated: 2023/07/25 13:34:36 by geudes           ###   ########.fr       */
+/*   Updated: 2023/07/25 22:44:17 by geudes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include <cstdlib>
+#include <sstream>
 
 class Contact
 {
@@ -27,22 +29,30 @@ class Contact
 		std::string dark_secret;
 	public:
 		Contact();
+		Contact(std::string f, std::string l, std::string n, std::string num, std::string secret);
+		Contact(const Contact &tocpy);
+		Contact& operator=(const Contact& tocpy);
 		~Contact();
 
-		std::string g_f_name(void);
-		std::string g_l_name(void);
-		std::string g_n_name(void);
-		std::string g_number(void);
+		std::string you_ll_fit(std::string str) const;
+		std::string display_search(int index) const;
 
-		void	add(void);
+		bool	add(void);
 
-		void	s_f_name(void);
-		void	s_l_name(void);
-		void	s_n_name(void);
-		void	s_number(void);
-		void	s_dark_secret(void);
+		bool	s_f_name(void);
+		bool	s_l_name(void);
+		bool	s_n_name(void);
+		bool	s_number(void);
+		bool	s_dark_secret(void);
 
-		int		g_nb_space(std::string str);
+		std::string	g_f_name(void) const;
+		std::string	g_l_name(void) const;
+		std::string	g_n_name(void) const;
+		std::string	g_number(void) const;
+		std::string	g_dark_secret(void) const;
 };
+
+std::ostream& operator<<(std::ostream &os, const Contact &obj);
+
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: geudes <geudes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 19:37:23 by geudes            #+#    #+#             */
-/*   Updated: 2023/07/25 14:50:33 by geudes           ###   ########.fr       */
+/*   Updated: 2023/07/25 23:04:56 by geudes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,6 @@ int main(void)
 	PhoneBook my_pb;
 
 	my_pb.routine();
+	my_pb.d_eof();
 	return (0);
 }

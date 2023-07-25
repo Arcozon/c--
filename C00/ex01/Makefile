@@ -8,7 +8,7 @@ OBJ = $(addprefix $(D_OBJ), $(S_SRC:.cpp=.o))
 D_INC = ./inc/
 
 CPP = c++
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 
 NAME = phonebook
 

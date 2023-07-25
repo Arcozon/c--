@@ -6,7 +6,7 @@
 /*   By: geudes <geudes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 19:37:29 by geudes            #+#    #+#             */
-/*   Updated: 2023/07/25 15:02:55 by geudes           ###   ########.fr       */
+/*   Updated: 2023/07/25 23:04:17 by geudes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include "Contact.hpp"
 #include <string>
+#include <cstdlib>
+#include <ctime>
 
 #define MAX_CONTACT 8
 class PhoneBook
@@ -23,17 +25,20 @@ class PhoneBook
 		Contact my_contacts[MAX_CONTACT];
 		int		i;
 		int		nb_contact;
+		bool	eof;
 	public:
 		PhoneBook();
 		~PhoneBook();
 
-		void	add(void);
-		void	search(void);
 		void	help(void);
-		void	exit(void);
+		void	add(void);
+		void	full(void);
+		void	search(void);
 		void	clear(void);
+		void	exit(void);
 
 		void	routine(void);
+		void	d_eof(void);
 };
 
 #endif
