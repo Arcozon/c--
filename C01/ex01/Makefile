@@ -1,5 +1,5 @@
 D_SRC = ./src/
-S_SRC = example.cpp example2.cpp
+S_SRC = main.cpp Zombie.cpp zombieHorde.cpp
 SRC = $(addprefix $(D_SRC), $(S_SRC))
 
 D_OBJ = ./obj/
@@ -10,7 +10,7 @@ D_INC = ./inc/
 CPP = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = example
+NAME = ZombieHorde
 
 all: $(NAME)
 
