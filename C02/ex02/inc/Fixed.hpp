@@ -6,9 +6,12 @@
 /*   By: geudes <geudes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 09:24:40 by geudes            #+#    #+#             */
-/*   Updated: 2023/07/31 14:33:46 by geudes           ###   ########.fr       */
+/*   Updated: 2023/07/31 20:13:48 by geudes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
 #include <iostream>
 #include <cmath>
@@ -56,3 +59,5 @@ class Fixed
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& obj);
+
+#endif
