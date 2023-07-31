@@ -6,7 +6,7 @@
 /*   By: geudes <geudes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 09:24:37 by geudes            #+#    #+#             */
-/*   Updated: 2023/07/31 15:51:57 by geudes           ###   ########.fr       */
+/*   Updated: 2023/07/31 15:56:56 by geudes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Fixed::Fixed(int const& to_cpy)
 
 Fixed::Fixed(float const& to_cpy)
 {
-	value = to_cpy * float(1 << e);
+	value = roundf(to_cpy * float(1 << e));
 }
 
 Fixed& Fixed::operator=(const Fixed&to_cpy)
