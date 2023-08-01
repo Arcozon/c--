@@ -5,40 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: geudes <geudes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/28 03:08:40 by geudes            #+#    #+#             */
-/*   Updated: 2023/08/01 05:56:40 by geudes           ###   ########.fr       */
+/*   Created: 2023/08/01 06:49:00 by geudes            #+#    #+#             */
+/*   Updated: 2023/08/01 08:29:55 by geudes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "DiamondTrap.hpp"
 #include <iostream>
-#include "Harl.hpp"
 
-void endl(void)
+int main(void)
 {
-	std::cout << std::endl;
-}
+	DiamondTrap trundle("trundle");
 
-int main(int ac, char **av)
-{
-	Harl my_harl;
-
-	// my_harl.warning();
-	if (ac == 1)
-	{
-		my_harl.complain("pipicacaprout");
-		endl();
-		my_harl.complain("debug");
-		endl();
-		my_harl.complain("DEBUG");
-		endl();
-		my_harl.complain("INFO");
-		endl();
-		my_harl.complain("WARNING");
-		endl();
-		my_harl.complain("ERROR");
-	}
-	else
-		for (int i = 1; i < ac; i++)
-			(my_harl.complain(av[i]), endl());
-
+	trundle.highFivesGuys();
+	trundle.guardGate();
+	trundle.WhoAmI();
+	trundle.takeDamage(9);
+	trundle.attack("Neeko");
+	trundle.beRepaired(1);
+	trundle.takeDamage(1000);
+	trundle.highFivesGuys();
+	trundle.guardGate();
+	trundle.WhoAmI();
+	return (0);
 }
