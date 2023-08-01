@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: geudes <geudes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 05:59:28 by geudes            #+#    #+#             */
-/*   Updated: 2023/08/01 15:14:35 by geudes           ###   ########.fr       */
+/*   Updated: 2023/08/01 15:29:39 by geudes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef WRONGCAT_HPP
+#define WRONGCAT_HPP
 
 #include <iostream>
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-class Cat : public Animal
+class WrongCat : public WrongAnimal
 {
 	public:
-		Cat();
-		~Cat();
-		Cat(Cat &other);
-		Cat& operator=(Cat &other);
+		WrongCat();
+		~WrongCat();
+		WrongCat(WrongCat &other);
+		WrongCat& operator=(WrongCat &other);
 
-		virtual void	makeNoise(void) const;
+		void	makeNoise(void) const;
 };
 
 #endif

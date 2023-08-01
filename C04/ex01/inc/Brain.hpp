@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: geudes <geudes@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 05:59:28 by geudes            #+#    #+#             */
-/*   Updated: 2023/08/01 15:14:35 by geudes           ###   ########.fr       */
+/*   Updated: 2023/08/01 15:12:19 by geudes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef BRAIN_HPP
+#define BRAIN_HPP
 
 #include <iostream>
-#include "Animal.hpp"
 
-class Cat : public Animal
+class Brain
 {
+	protected:
+		std::string	ideas[100];
 	public:
-		Cat();
-		~Cat();
-		Cat(Cat &other);
-		Cat& operator=(Cat &other);
+		Animal();
+		virtual ~Animal();
+		Animal(std::string _type);
+		Animal(Animal &other);
+		Animal& operator=(Animal &other);
 
+		std::string getType(void) const;
 		virtual void	makeNoise(void) const;
 };
 
